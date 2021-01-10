@@ -1,1 +1,1 @@
-# heroku_workout
+# Resale car price estimation (Deployed on Heroku using Flask)
