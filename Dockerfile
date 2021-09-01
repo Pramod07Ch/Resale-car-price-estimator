@@ -1,14 +1,14 @@
 #Using the base image with python 3.7
  FROM python:3.7
  
- WORKDIR /ML_flask_app 
+ WORKDIR /app 
   
- RUN pip install pandas scikit-learn flask gunicorn datetime numpy requests
+ RUN pip install pandas scikit-learn==0.21.3 flask gunicorn datetime numpy requests sklearn
  
  ADD ./models ./models
  
- ADD app.py app.py
+ ADD server.py server.py
  
  EXPOSE 5000 
  
- CMD ["gunicorn", "--bind", "0.0.0.0:5000", "ML_flask_app:app"]
+ CMD ["gunicorn", "--bind", "0.0.0.0:5000", "server:app"] 
