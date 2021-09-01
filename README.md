@@ -9,3 +9,7 @@ To use the project:
 - first check with requirements from requirements.txt
 - run app.py locally
 - to deploy - heroku-app can be used
+
+### Docker build
+- clone the repo
+- docker build . -t[give a name]
